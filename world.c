@@ -96,6 +96,9 @@ void drawWorld(World *world) {
         printf("%s\n", canvas[i]);
     }
 
-    // Exibir coordenadas do retângulo após movimento
-    printf("Coordenadas do retângulo: (%d, %d)\n", world->rects[0].x, world->rects[0].y); // Supondo que há apenas um retângulo
+    // Exibir coordenadas de todos os retângulos após movimento
+    printf("Coordenadas dos retângulos:\n");
+    for (int i = 0; i < world->count; ++i) {
+        printf("Retângulo %d: (%d, %d)\n", i+1, world->rects[i].x, world->rects[i].y);
+    }
 }
