@@ -12,7 +12,9 @@ void displayMenu(World *world) {
         printf("1. Criar retângulo\n");
         printf("2. Mover retângulo para a esquerda\n");
         printf("3. Mover retângulo para a direita\n");
-        printf("4. Sair\n");
+        printf("4. Mover retângulo para a cima\n");
+        printf("5. Mover retângulo para a baixo\n");
+        printf("0. Sair\n");
         printf("Escolha uma opção: ");
         scanf("%d", &choice);
 
@@ -41,6 +43,24 @@ void displayMenu(World *world) {
                 drawWorld(world);
                 break;
             case 4:
+                // Movendo retângulo para a direita
+                printf("Digite as coordenadas do canto inferior esquerdo do retângulo (x y): ");
+                scanf("%d %d", &x, &y);
+                printf("Digite a quantidade de unidades para mover para a cima: ");
+                scanf("%d", &p);
+                moveRectangle(world, x, y, p, 1);
+                drawWorld(world);
+                break;
+            case 5:
+                // Movendo retângulo para a direita
+                printf("Digite as coordenadas do canto inferior esquerdo do retângulo (x y): ");
+                scanf("%d %d", &x, &y);
+                printf("Digite a quantidade de unidades para mover para a baixo: ");
+                scanf("%d", &p);
+                moveRectangle(world, x, y, p, 1);
+                drawWorld(world);
+                break;
+            case 0:
                 printf("Encerrando o programa...\n");
                 break;
             default:
